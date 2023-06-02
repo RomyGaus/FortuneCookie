@@ -1,38 +1,105 @@
-.App {
+body{
+  background-color: rgb(84, 3, 3);
+}
+
+h1 {
+  font-family: cursive;
+  font-size: 50px;
   text-align: center;
+  color:rgb(254, 217, 125);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h3 {
+  text-align: center;
+  color:rgb(254, 217, 125);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.header {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-between;
 }
 
-.App-link {
-  color: #61dafb;
+.message {
+  background-color: rgb(217, 238, 246);
+  display: inline-block;
+  padding: 10px;
+  border: 3px solid rgb(145	174	183);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadeIn 0.3s linear;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-delay: 0.3s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btn {
+  background-color: rgb(254, 217, 125);
+  color: rgb(84, 3, 3);
+  padding-inline: 30px;
+  padding-block: 10px;
+  font-size: large;
+  font-weight: bolder;
+  border: none;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.fortuneCookie {
+  width: 40%;
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 15px);
+  transform: translate(-50%, -50%);
+}
+
+.cookiePieces {
+  width: 100%;
+}
+
+.cookiePieces img {
+  display: inline-block;
+  width: 40%;
+  object-fit: 'contain';
+  position: absolute;
+  left: 50%;
+  animation-fill-mode: forwards;
+  z-index: 100;
+}
+
+.cookiePieceLeft {
+  transform: translate(-61%, -10%) rotate(23deg);
+  animation: slideLeft 0.5s linear;
+}
+
+@keyframes slideLeft{
+    0% {}
+    100% {
+      left: 0%;
+      transform: translate(0%, -10%);
+    }
+}
+
+.cookiePieceRight {
+  transform: translate(-40%, -10%) rotate(-25deg);
+  animation: slideRight 0.5s linear;
+}
+
+@keyframes slideRight{
+  0% {}
+  100% {
+    left: 100%;
+    transform: translate(-100%, -10%);
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@keyframes fadeIn{
+  0% {}
+  100% {
+    opacity: 100;
   }
 }
