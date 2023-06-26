@@ -59,6 +59,7 @@ h3 {
 
 .cookiePieces {
   width: 100%;
+  height: 100vh;
 }
 
 .cookiePieces img {
@@ -66,13 +67,15 @@ h3 {
   width: 40%;
   object-fit: 'contain';
   position: absolute;
+  top: 50%;
   left: 50%;
+  transform: translate(-50%, -50%);
   animation-fill-mode: forwards;
   z-index: 100;
 }
 
 .cookiePieceLeft {
-  transform: translate(-61%, -10%) rotate(23deg);
+  transform: translate(-61%, -50%) rotate(23deg);
   animation: slideLeft 0.5s linear;
 }
 
@@ -80,12 +83,12 @@ h3 {
     0% {}
     100% {
       left: 0%;
-      transform: translate(0%, -10%);
+      transform: translate(0%, -50%);
     }
 }
 
 .cookiePieceRight {
-  transform: translate(-40%, -10%) rotate(-25deg);
+  transform: translate(-40%, -50%) rotate(-25deg);
   animation: slideRight 0.5s linear;
 }
 
@@ -93,7 +96,7 @@ h3 {
   0% {}
   100% {
     left: 100%;
-    transform: translate(-100%, -10%);
+    transform: translate(-100%, -50%);
   }
 }
 
